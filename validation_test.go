@@ -19,7 +19,7 @@ func TestBasicJsonCorrect(t *testing.T) {
 		}
 	`)
 
-	result := validator.Validate(data, &dataStruct, errorPool)
+	result := validator.ValidateJson(data, &dataStruct, errorPool)
 	if !result {
 		t.Fatal(errorPool.GetErrors())
 		return
